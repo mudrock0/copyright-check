@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Content ID Matcher (Simulated)</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full border border-gray-200">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">YouTube Content ID Matcher</h1>
+        <p class="text-sm text-gray-600 text-center mb-6">
+            This is a simulated example to demonstrate the concept of matching YouTube video URLs to known assets.
+            The actual YouTube Content ID API requires server-side implementation and authentication.
+        </p>
+
+        <div class="mb-4">
+            <label for="videoUrl" class="block text-gray-700 text-sm font-semibold mb-2">Enter YouTube Video URL:</label>
+            <input type="url" id="videoUrl" placeholder="e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                   class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
+                   required>
+        </div>
+
+        <button id="matchButton"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-200 ease-in-out shadow-lg transform hover:scale-105 active:scale-95">
+            Match Video Asset
+        </button>
+
+        <div id="result" class="mt-8 p-4 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 text-center hidden">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
